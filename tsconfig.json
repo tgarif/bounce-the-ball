@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es2022",
+    "module": "es2022",
+    "rootDir": "./ts",
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "declaration": true,
+    "sourceMap": true,
+    "outDir": "./dist/js",
+    "declarationDir": "./dist/ts",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "include": ["ts/**/*.mts", "ts/types/**/*.d.ts"],
+  "exclude": ["node_modules", "dist"]
+}

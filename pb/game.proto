@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package game;
+
+option go_package = "bouncing-ball-game/pb";
+
+message Vector2 {
+    double x = 1;
+    double y = 2;
+}
+
+message Controls {
+  double speed = 1; // Horizontal movement speed
+  double jump_force = 2; // Force applied when jumping
+}
+
+message InputState {
+    bool move_left = 1;  // Indicates if the player is moving left
+    bool move_right = 2; // Indicates if the player is moving right
+    bool jump = 3;       // Indicates if the player is jumping
+}
+
+message GameObject {
+    string id = 1;            // Unique identifier for the object
+    Vector2 position = 2;     // Current position
+    Vector2 velocity = 3;     // Current velocity
+    Vector2 acceleration = 4; // Current acceleration
+    double mass = 5;          // Mass of the object
+    double elasticity = 6;    // Elasticity (bounciness)
+    double friction = 7;      // Friction coefficient
+    Controls controls = 8;    // Optional, player-specific controls
+    bool Grounded = 9;        // Indicates if the player is on the ground
+}
+
+message PhysicsEngineState {
+    repeated GameObject objects = 1; // List of all game objects
+    Vector2 gravity = 2;             // Gravity vector applied to all objects
+    InputState input = 3;            // Current input state (optional for debugging or sync)
+}
