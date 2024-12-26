@@ -50,6 +50,7 @@ clean:
 	rm -rf $(DIST_DIR)
 	rm -f $(TS_DIR)/game_pb.mts
 	rm -f $(PB_DIR)/*.pb.go
+	rm -f $(WASM_FILE)
 
 # Rebuild everything
 rebuild: clean all
