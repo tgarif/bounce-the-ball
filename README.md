@@ -9,6 +9,8 @@ written in TypeScript + HTML 2D canvas
 
 ![screenshot](./screenshot.png)
 
+Deployed to Github Pages here: https://tgarif.github.io/bounce-the-ball/
+
 ## Quick Start
 
 ```console
